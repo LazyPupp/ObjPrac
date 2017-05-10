@@ -21,5 +21,9 @@ function findById(items, idNum) {
 }
 
 //Problem 4
+function validateKeys(object, expectedKeys) {
+  return JSON.stringify(Object.keys(object)) === JSON.stringify(expectedKeys);
+}
+
 //Problem 5
 
