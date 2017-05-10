@@ -26,4 +26,16 @@ function validateKeys(object, expectedKeys) {
 }
 
 //Problem 5
-
+function makeToDos(owner, toDos) {
+   // your code here
+   return {
+   		owner:owner,
+   		toDos:toDos,
+   		generateHtml: function(){
+   			// let str = '<ul>'
+   			// str += toDos.map(el=>`<li>${el}</li>`).join('');
+   			// return str + "</ul>";
+   			return `<ul>${toDos.map(el=>`<li>${el}</li>`).join('')}</ul>`;
+   		}
+   };
+}
