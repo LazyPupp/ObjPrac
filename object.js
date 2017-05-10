@@ -22,4 +22,18 @@ function updateObject(obj) {
   return obj;
 }
 
+//Problem 3
+function personMaker() {
+  var person = {
+    firstName: 'Paul',
+    lastName: 'Jones',
+    fullName:  function(){
+      return this.firstName + ' '+ this.lastName;
+    }
+  };
+  return person;
+}
+
+//Problem 4
+
 
