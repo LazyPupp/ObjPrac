@@ -7,3 +7,11 @@ function makeStudentsReport(data) {
   }
   return arr;
 }
+
+//Problem 2
+function enrollInSummerSchool(students) {
+  students.forEach(el => el.status = 'In Summer school');
+  return students;
+}
+
+
