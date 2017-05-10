@@ -83,5 +83,16 @@ return arr.map(el => el.hasOwnProperty('boss') ? `${el.job_title} ${el.name} rep
 console.log(workChart(arr));
 
 //Problem 6
+const cipher ={
+	a: 2,
+	b: 3,
+	c: 4,
+	d: 5
+};
+function decoder(str){
+
+	return str.split(' ').map(el=>cipher.hasOwnProperty( el[0] ) ? el[cipher[el[0]]-1]: ` ` ).join('');  
+}
+
 //Problem 7
 
