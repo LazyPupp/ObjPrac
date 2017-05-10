@@ -125,4 +125,3 @@ console.log(array.filter(el => el.attack > 5));
 
 
 
-
