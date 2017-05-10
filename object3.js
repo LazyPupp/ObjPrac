@@ -48,8 +48,40 @@ let arr = [{
 		name:'Bum',
 		job_title:'Coder'
 	}];
+
 console.log(arr.map(el=>`${el.job_title} ${el.name}`).join('\n'));
+
 //Problem 5
+const arr = [
+  {
+    name:'Jamie',
+    job_title:'professional gamer',
+    boss: 'Iron Man'
+  },
+  {
+    name:'Kyle',
+    job_title:'bum league of Legend player',
+    boss: 'Hulk'
+  },
+  {
+    name:'Bum',
+    job_title:'Coder',
+    boss: 'Captain America'
+  },
+  {
+    name: 'Richard',
+    job_title: 'Founder'
+  }
+];
+
+function workChart(arr) {
+
+return arr.map(el => el.hasOwnProperty('boss') ? `${el.job_title} ${el.name} reports to ${el.boss}.` : `${el.job_title} ${el.name} doesn't report to anybody.`).join('\n');
+
+}
+
+console.log(workChart(arr));
+
 //Problem 6
 //Problem 7
 
