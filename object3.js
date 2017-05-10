@@ -36,6 +36,19 @@ console.log(food.meals[3]);
 
 
 //Problem 4
+let arr = [{
+		name:'Jamie',
+		job_title:'professional gamer'
+	},
+	{
+		name:'Kyle',
+		job_title:'bum league of Legend player'
+	},
+	{
+		name:'Bum',
+		job_title:'Coder'
+	}];
+console.log(arr.map(el=>`${el.job_title} ${el.name}`).join('\n'));
 //Problem 5
 //Problem 6
 //Problem 7
