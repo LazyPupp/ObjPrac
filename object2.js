@@ -14,4 +14,12 @@ function enrollInSummerSchool(students) {
   return students;
 }
 
+//Problem 3
+function findById(items, idNum) {
+ // your code here
+ return items.filter(el=>el.id === idNum)[0];
+}
+
+//Problem 4
+//Problem 5
 
