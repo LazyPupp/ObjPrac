@@ -1,5 +1,6 @@
+//Problem 1
 function createMyObject() {
-  
+
   const myObj={
     foo: 'bar',
     answerToUniverse:42,
@@ -11,5 +12,14 @@ function createMyObject() {
   return myObj;
 }
 
+//Problem 2
+function updateObject(obj) {
+  obj.foo = 'foo';
+  obj.bar = 'bar';
+  obj.bizz = 'bizz';
+  obj.bang = 'bang';
+
+  return obj;
+}
 
 
