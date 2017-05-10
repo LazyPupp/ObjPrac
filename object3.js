@@ -9,6 +9,7 @@ const loaf = {
 
 console.log(`${loaf.flour}, ${loaf.water}`);
 console.log(loaf.hydration());
+
 //Problem 2
 const myObj={
 	foo:"foo",
@@ -25,7 +26,15 @@ function loopy(obj){
 	}
 }
 loopy(myObj);
+
 //Problem 3
+const food = {
+  meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+}
+
+console.log(food.meals[3]);
+
+
 //Problem 4
 //Problem 5
 //Problem 6
