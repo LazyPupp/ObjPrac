@@ -76,7 +76,7 @@ const arr = [
 
 function workChart(arr) {
 
-return arr.map(el => el.hasOwnProperty('boss') ? `${el.job_title} ${el.name} reports to ${el.boss}.` : `${el.job_title} ${el.name} doesn't report to anybody.`).join('\n');
+  return arr.map(el => el.hasOwnProperty('boss') ? `${el.job_title} ${el.name} reports to ${el.boss}.` : `${el.job_title} ${el.name} doesn't report to anybody.`).join('\n');
 
 }
 
@@ -89,10 +89,40 @@ const cipher ={
 	c: 4,
 	d: 5
 };
+
 function decoder(str){
 
-	return str.split(' ').map(el=>cipher.hasOwnProperty( el[0] ) ? el[cipher[el[0]]-1]: ` ` ).join('');  
+	return str.split(' ').map(el=>cipher.hasOwnProperty( el[0] ) ? el[cipher[el[0]]-1]: ` ` ).join('');
 }
 
 //Problem 7
+function createCharacter(name, nickname, race, origin, attack, defense, weapon) {
+  return {
+    name, nickname, race, origin, attack, defense,
+    describe: function () {
+      return `${name} is a ${race} from ${origin} who uses ${weapon}.`;
+    },
+    evaluateFight: function(obj) {
+      return `Your opponent takes ${attack - obj.defense > 0 ? attack - obj.defense : 'zero'} damage and you receive ${obj.attack - defense > 0 ? obj.attack - defense : 'zero'} damage`;
+    }
+
+  };
+
+}
+
+ let array = [
+  createCharacter('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 6, 'wizard staff'),
+  createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1, 'the Ring'),
+  createCharacter('Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 3, 2, 'the String and Barrow Blade'),
+  createCharacter('Aragorn son of Arathorn', 'aragorn', 'Man', 'Dunnedain', 6, 8, 'the Anduril'),
+  createCharacter('Legolas', 'legolas', 'Elf', 'Woodland Realm', 8, 5, 'the Bow and Arrow'),
+  createCharacter('Arwen Undomiel', 'arwen', 'Half Elf', 'Rivendell', 100, 100, 'the Hadhafang')
+];
+
+console.log(array.find(el => el.nickname === 'aragorn').describe());
+console.log(array.filter(el => el.race === 'Hobbit'));
+console.log(array.filter(el => el.attack > 5));
+
+
+
 
